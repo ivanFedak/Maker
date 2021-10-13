@@ -1,0 +1,60 @@
+.watch
+    position: relative
+    @include adaptiv-value('padding-top', 130, 45, 1)
+    @include adaptiv-value('padding-bottom', 130, 45, 1)
+    &__container 
+        max-width: 790px
+    &__body
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        position: relative
+        z-index: 2
+    &__title
+        font-weight: bold
+        @include adaptiv-value('font-size', 38, 30, 1)
+        line-height: 120%
+        text-align: center
+        color: #FFFFFF
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 20, 15, 1)
+    &__text 
+        font-weight: normal
+        @include adaptiv-value('font-size', 16, 14, 1)
+        line-height: 160%
+        text-align: center
+        color: #FFFFFF
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 36, 20, 1)
+    &__play 
+        position: relative
+        @include adaptiv-value('width', 93, 46, 1)
+        @include adaptiv-value('height', 93, 46, 1)
+        background: white
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        &::before
+            content: ''
+            width: 0
+            height: 0
+            border-top: 20px solid transparent
+            border-left: 32px solid #35AFBF
+            border-bottom: 20px solid transparent
+            @media (max-width: $md2 + px)//Less 992
+                border-top: 15px solid transparent
+                border-left: 25px solid #35AFBF
+                border-bottom: 15px solid transparent
+            @media (max-width: 660px)//Less 
+                border-top: 12px solid transparent
+                border-left: 20px solid #35AFBF
+                border-bottom: 12px solid transparent
+               
+    &__image
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%

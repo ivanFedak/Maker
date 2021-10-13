@@ -1,0 +1,42 @@
+.features
+    @include adaptiv-value('padding-top', 120, 40, 1)
+    @include adaptiv-value('padding-bottom', 120, 40, 1)
+    &__containe
+    &__body
+        @include adaptiv-value('padding-top', 60, 25, 1)
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
+        column-gap: 75px
+        grid-row-gap: 50px
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        border-bottom: 1px solid red
+    &__image
+        @include adaptiv-value('padding', 24, 16, 1)
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        min-width: 80px
+        min-height: 80px
+        border-radius: 50%
+        background: #35AFBF
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 30, 25, 1)
+    &__title
+        font-weight: 600
+        @include adaptiv-value('font-size', 21, 20, 1)
+        line-height: 150%
+        text-align: center
+        &:not(:last-child)
+            margin-bottom: 15px
+    &__text
+        font-weight: normal
+        @include adaptiv-value('font-size', 16, 15, 1)
+        line-height: 160%
+        text-align: center
+        color: $gray
+        padding-bottom: 30px
