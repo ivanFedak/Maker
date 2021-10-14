@@ -1,0 +1,108 @@
+.footer
+    background: #2C353E
+    &__top
+        @include adaptiv-value('padding-top', 80, 40, 1)
+        @include adaptiv-value('padding-bottom', 50, 25, 1)
+    &__container
+    &__body
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr))
+        @include adaptiv-value('column-gap', 85, 10, 1)
+        grid-row-gap: 20px
+        justify-items: center
+        @media (max-width: 650px) //Less 650
+            display: flex
+            flex-direction: column
+            justify-content: center
+    &__item
+.item-footer 
+    &__title
+        position: relative
+        font-weight: 600
+        @include adaptiv-value('font-size', 21, 19, 1)
+        line-height: 150%
+        color: $white
+        &:not(:last-child)
+            margin-bottom: 15px
+        @media (max-width: 650px) //Less 650
+            background: #bfc2c56b
+            padding: 0 10px
+            &::before
+                position: absolute
+                content: ''
+                width: 0
+                height: 0
+                right: 10px
+                top: 50%
+                transform: translateY(-50%)
+                border-left: 7px solid transparent
+                border-right: 7px solid transparent
+                border-top: 14px solid #2C353E
+                transition: all 0.3s ease 0s
+    &__body
+        @media (max-width: 650px) //Less 650
+           display: none
+           transform: translateY(-20px)
+    &__price
+        @include adaptiv-value('font-size', 38, 25, 1)
+        color: $white
+        &:not(:last-child)
+            margin-bottom: 15px
+        sup
+            font-weight: normal
+            font-size: 16px
+            line-height: 160%
+            color: $white
+            padding-right: 4px
+        span
+            font-size: 16px
+            line-height: 160%
+            color: $white
+
+    &__list
+        &:not(:last-child)
+            margin-bottom: 20px
+    &__item
+        &:not(:last-child)
+            margin-bottom: 15px
+    &__link
+        font-weight: normal
+        @include adaptiv-value('font-size', 16, 15, 1)
+        line-height: 160%
+        color: #FFFFFF
+        opacity: 0.7
+    &__btn 
+        display: inline-flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        min-width: 140px
+        padding: 15px 30px
+        background: none
+        border-radius: 12px
+        border: 2px solid rgba(255, 255, 255, 0.3)
+        transition: all 0.3s ease 0s
+        
+        color: $white
+        font-weight: 500
+        font-size: 16px
+        color: #FFFFFF
+        @media (any-hover: hover )
+            &:hover
+                background: $white
+                color: rgb(154, 154, 154)
+                
+
+
+.item-footer__body_active
+    display: flex
+    align-items: center
+    flex-direction: column
+    padding-left: 10px
+    transform: translateY(0px)
+.item-footer__title_active
+    &::before
+        top: 30%
+        transform: rotateX(160deg)
+    

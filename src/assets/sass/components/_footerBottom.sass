@@ -1,0 +1,57 @@
+.footer
+    &__bottom
+    &__container
+    &__wrapper
+        @include adaptiv-value('padding-top', 40, 25, 1)
+        @include adaptiv-value('padding-bottom', 40, 25, 1)
+        border-top: 1px solid #4B4B4B
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media (max-width: $md3 + px) //Less 768
+           flex-direction: column
+    &__info
+    &__social
+
+.info-footer
+    @media (max-width: $md3 + px) //Less 768
+       order: 2
+    &__list
+        display: flex
+        flex-wrap: wrap
+        max-width: 750px
+        &:not(:last-child)
+            margin-bottom: 12px
+        @media (max-width:  650px) //Less 650
+            flex-direction: column  
+            align-items: center
+           
+    &__item
+        &:not(:last-child)
+            padding-right: 35px
+        @media (max-width:  650px) //Less 650
+            &:not(:last-child)
+                padding: 0 0 10px 0
+    &__link
+        font-weight: 500
+        font-size: 16px
+        line-height: 160%
+        color: $white
+
+    &__copy
+        font-size: 12px
+        line-height: 160%
+        color: $white
+        opacity: 0.6
+
+
+.social-footer 
+    display: flex
+    align-items: center
+    @media (max-width: $md3 + px) //Less 768
+       order: 1
+       padding-bottom: 20px
+    &__item 
+        &:not(:last-child)
+            @include adaptiv-value('margin-right', 30, 20, 1)
+

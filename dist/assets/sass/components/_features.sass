@@ -8,12 +8,14 @@
         grid-template-columns: repeat(auto-fit, minmax(315px, 1fr))
         column-gap: 75px
         grid-row-gap: 50px
+        @media (max-width: 350px)//Less 350
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+           
     &__item
         display: flex
         flex-direction: column
         align-items: center
         justify-content: center
-        border-bottom: 1px solid red
     &__image
         @include adaptiv-value('padding', 24, 16, 1)
         display: flex
@@ -40,3 +42,8 @@
         text-align: center
         color: $gray
         padding-bottom: 30px
+    &__line
+        width: 260px
+        height: 2px
+        background: linear-gradient(90deg, rgba(53, 175, 191, 0) 0%, rgba(53, 175, 191, 0.83) 49.65%, rgba(53, 175, 191, 0) 100%)
+        border-radius: 10px
